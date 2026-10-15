@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODIE HUB | Taste the Passion</title>
+    <meta name="description" content="Discover delicious food, special offers and your favorite meals at FOODIE HUB.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="#home" class="logo">FOODIE<span>HUB.</span></a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+        <nav id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#menu">Our Menu</a>
+            <a href="#offers">Offers</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#cart" class="cart-link">🛒 Cart <span id="cartCount">0</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">GOOD FOOD. GOOD MOOD.</span>
+                <h1>Delicious Food,<br>Made With <span>Love.</span></h1>
+                <h3>Taste the Passion. Savor Every Moment.</h3>
+                <p>Discover mouth-watering flavors, fresh ingredients
+                   and unforgettable meals made just for you.</p>
+                <a href="#menu" class="btn">Explore Our Menu ↗</a>
+                <div class="hero-note">★ Fresh ingredients &nbsp; ★ Amazing taste</div>
+            </div>
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=85"
+                    alt="Freshly baked pizza"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x600/28221e/ffffff?text=Fresh+Food'">
+                <div class="image-label">Made fresh, served with love ❤️</div>
+            </div>
+        </section>
+
+        <!-- Highlights -->
+        <section class="highlights">
+            <div><span>🍅</span><h3>Fresh Ingredients</h3><p>Freshness in every bite</p></div>
+            <div><span>👨‍🍳</span><h3>Expert Chefs</h3><p>Prepared with passion</p></div>
+            <div><span>❤️</span><h3>Made With Love</h3><p>Flavor you will remember</p></div>
+            <div><span>✨</span><h3>Quality First</h3><p>Every meal matters</p></div>
+        </section>
+
+        <!-- Menu -->
+        <section class="section menu-section" id="menu">
+            <div class="section-heading">
+                <span class="eyebrow">OUR DELICIOUS SELECTION</span>
+                <h2>Explore Our <span>Menu</span></h2>
+                <p>Find your next favorite meal.</p>
+            </div>
+
+            <div class="menu-tools">
+                <input type="search" id="searchInput"
+                       placeholder="🔍 Search your favorite food..."
+                       aria-label="Search food">
+                <div class="categories" id="categories">
+                    <button class="category active" data-category="All Items">All Items</button>
+                    <button class="category" data-category="Fast Food">Fast Food</button>
+                    <button class="category" data-category="Indian Food">Indian Food</button>
+                    <button class="category" data-category="Italian Food">Italian Food</button>
+                    <button class="category" data-category="Desserts">Desserts</button>
+                </div>
+            </div>
+
+            <div class="food-grid" id="foodGrid"></div>
+            <p class="empty-message" id="noResults" hidden>
+                😕 No matching food found. Try another search!
+            </p>
+        </section>
+
+        <!-- Special Offers -->
+        <section class="section offers-section" id="offers">
+            <div class="section-heading">
+                <span class="eyebrow">DELICIOUS DEALS</span>
+                <h2>Special <span>Offers</span></h2>
+                <p>More flavor, more happiness, better value.</p>
+            </div>
+
+            <div class="offers-grid">
+                <article class="offer-card offer-orange">
+                    <div>
+                        <span class="offer-tag">WEEKEND SPECIAL</span>
+                        <h3>Pizza Party!</h3>
+                        <p>Get a delicious pizza for just ₹249.</p>
+                        <button class="btn btn-light" data-offer="pizza">Order Now ↗</button>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=500&q=80"
+                         alt="Pizza offer"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x300/ed7628/ffffff?text=Pizza'">
+                </article>
+
+                <article class="offer-card offer-dark">
+                    <div>
+                        <span class="offer-tag">COMBO DEAL</span>
+                        <h3>Burger Combo</h3>
+                        <p>Burger, fries and a refreshing drink.</p>
+                        <button class="btn" data-offer="combo">Get the Combo ↗</button>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80"
+                         alt="Burger combo"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x300/28221e/ffffff?text=Burger+Combo'">
+                </article>
+            </div>
+            <p class="offer-note">* Promotional prices are demonstration prices. Offers may vary.</p>
+        </section>
+
+        <!-- About -->
+        <section class="section about-section" id="about">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=85"
+                     alt="Restaurant dining experience"
+                     onerror="this.onerror=null;this.src='https://placehold.co/800x600/28221e/ffffff?text=Our+Restaurant'">
+            </div>
+            <div class="about-content">
+                <span class="eyebrow">A LITTLE ABOUT US</span>
+                <h2>Good Food Brings<br>People <span>Together.</span></h2>
+                <p>Welcome to FOODIE HUB, where every dish is made to
+                   create a memorable experience. We believe great food
+                   starts with fresh ingredients, creative recipes and a
+                   passion for serving people.</p>
+                <p>From comforting Indian meals to delicious Italian
+                   favorites and sweet treats, we bring happiness to
+                   your table with every bite.</p>
+                <div class="about-points">
+                    <p>✓ Fresh and quality ingredients</p>
+                    <p>✓ Flavorful recipes</p>
+                    <p>✓ Friendly service and customer care</p>
+                </div>
+                <a href="#menu" class="btn">Discover Our Food ↗</a>
+            </div>
+        </section>
+
+        <!-- Shopping Cart -->
+        <section class="section cart-section" id="cart">
+            <div class="section-heading">
+                <span class="eyebrow">YOUR FOOD, YOUR WAY</span>
+                <h2>Your Shopping <span>Cart</span></h2>
+                <p>Your selected favorites, all in one place.</p>
+            </div>
+
+            <div class="cart-layout">
+                <div class="cart-items" id="cartItems"></div>
+
+                <aside class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row"><span>Items</span><span id="summaryItems">0</span></div>
+                    <div class="summary-row"><span>Subtotal</span><span id="subtotal">₹0</span></div>
+                    <div class="summary-row"><span>Delivery</span><span id="delivery">₹0</span></div>
+                    <div class="summary-row total-row"><strong>Total</strong><strong id="total">₹0</strong></div>
+                    <button class="btn checkout-btn" id="checkoutBtn">Checkout Demo →</button>
+                    <button class="clear-btn" id="clearCartBtn">Clear Cart</button>
+                    <p class="demo-note">Demo checkout only. No real payment is collected.</p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section contact-section" id="contact">
+            <div class="section-heading">
+                <span class="eyebrow">WE'D LOVE TO HEAR FROM YOU</span>
+                <h2>Get In <span>Touch</span></h2>
+                <p>Have a question or suggestion? Send us a message.</p>
+            </div>
+
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h3>Let's Talk Food!</h3>
+                    <p>📍 Bengaluru, Karnataka, India</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ hello@foodiehub.example</p>
+                    <p>🕒 Daily: 10:00 AM – 10:00 PM</p>
+                    <p class="demo-note">Sample contact details for this college project.</p>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text"
+                           placeholder="Enter your name" required minlength="2">
+
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email"
+                           placeholder="you@example.com" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" name="phone" type="tel"
+                           placeholder="10-digit mobile number"
+                           pattern="[0-9]{10}" maxlength="10" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4"
+                              placeholder="Write your message..." required minlength="5"></textarea>
+
+                    <button type="submit" class="btn">Send Message ↗</button>
+                    <p id="formMessage" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <a href="#home" class="logo">FOODIE<span>HUB.</span></a>
+                <p>Taste the Passion. Savor Every Moment.</p>
+                <p>Bringing happiness to your plate, one meal at a time.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#menu">Our Menu</a>
+                <a href="#offers">Special Offers</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div>
+                <h3>Opening Hours</h3>
+                <p>Monday – Sunday</p>
+                <p>10:00 AM – 10:00 PM</p>
+                <p>📍 Bengaluru, India</p>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+                </div>
+                <p>Stay connected for more delicious updates!</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © <span id="year"></span> FOODIE HUB. All rights reserved. | College Project Demo
+        </div>
+    </footer>
+
+    <!-- Checkout confirmation modal -->
+    <dialog id="checkoutDialog" class="checkout-dialog">
+        <div class="dialog-content">
+            <button type="button" class="dialog-close" id="closeDialog" aria-label="Close">×</button>
+            <div class="success-icon">✓</div>
+            <h2>Order Summary</h2>
+            <p id="orderDetails"></p>
+            <p class="demo-note">This is a demonstration order. No real order or payment has been placed.</p>
+            <button class="btn" id="confirmDemoBtn">Confirm Demo Order</button>
+        </div>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
